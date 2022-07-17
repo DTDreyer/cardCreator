@@ -1,4 +1,4 @@
-package com.dtdreyer.cardcreater;
+package com.dtdreyer.cardCreator;
 
 import org.json.JSONObject;
 
@@ -11,6 +11,7 @@ public class AddCard {
      * 
      * @return true if the card was added, false if it was not.
      * 
+     * @author DTDreyer
      */
     public static boolean createMonsterCard(String[] data) {
         int id = JSONController.getLastAddedCardId();
@@ -52,6 +53,15 @@ public class AddCard {
         return true;
     }
 
+    /**
+     * This method creates a spell card json object and adds it to the card library.
+     * 
+     * @param data the spell card data.
+     * 
+     * @return true if the card was added, false if it was not.
+     * 
+     * @author DTDreyer
+     */
     public static boolean createSpellCard(String[] data) {
         int id = JSONController.getLastAddedCardId();
         String idString = Integer.toString(id);
@@ -83,6 +93,15 @@ public class AddCard {
         return true;
     } 
 
+    /**
+     * This method creates a curse card json object and adds it to the card library.
+     * 
+     * @param data the curse card data.
+     * 
+     * @return true if the card was added, false if it was not.
+     * 
+     * @author DTDreyer
+     */
     public static boolean createCurseCard(String[] data) {
         int id = JSONController.getLastAddedCardId();
         String idString = Integer.toString(id);

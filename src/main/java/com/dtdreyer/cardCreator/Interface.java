@@ -1,4 +1,4 @@
-package com.dtdreyer.cardcreater;
+package com.dtdreyer.cardCreator;
 
 import java.util.Scanner;
 
@@ -6,7 +6,11 @@ import org.json.JSONObject;
 
 public class Interface {
 
-
+    /**
+     * This method is the user main menu.
+     * 
+     * @author DTDreyer
+     */
     public static void mainMenu() {
         while (true) {
             System.out.println("----------------------------------------------------");
@@ -40,6 +44,11 @@ public class Interface {
 
     }
 
+    /**
+     * This method starts the creation of a new card.
+     * 
+     * @author DTDreyer
+     */
     private static void createCard(){
         while (true) {
             System.out.println("----------------------------------------------------");
@@ -69,6 +78,12 @@ public class Interface {
         mainMenu();
     }
 
+
+    /**
+     * This method creates a monster card.
+     * 
+     * @author DTDreyer
+     */
     private static void createMonster() {
         String input = "";
         System.out.println("----------------------------------------------------");
@@ -306,6 +321,13 @@ public class Interface {
         cardAddConfirmation("monster", data);
     }
 
+    /**
+     * This method is used to add a spell or curse card to the database.
+     *
+     * @param type The type of card to be added.
+     * 
+     * @author DTDreyer
+     */
     private static void createSpellOrCurse(String identifier) {
         System.out.println("----------------------------------------------------");
         System.out.println(identifier + " creation menu:");
@@ -339,6 +361,15 @@ public class Interface {
         cardAddConfirmation(identifier, data);
     }
 
+    /**
+     * This method lets the user confirm if the new card should be added to the card library.
+     * 
+     * @param cardType The type of card to be added.
+     * 
+     * @param data The data of the card to be added.
+     *
+     * @author DTDreyer
+     */
     private static void cardAddConfirmation(String cardType, String[] data) {
 
         System.out.println("Add "+cardType+" to library? (y/n)");
@@ -364,6 +395,11 @@ public class Interface {
         }
     }
 
+    /**
+     * This method lets the user view a card from the card library by its ID.
+     * 
+     * @author DTDreyer
+     */
     private static void viewCards(){
         System.out.println("----------------------------------------------------");
         System.out.println("View cards menu:");
@@ -391,6 +427,11 @@ public class Interface {
         mainMenu();
     }
     
+    /**
+     * This method is used to get the users input.
+     * 
+     * @return The users input.
+     */
     private static String getUserInput() {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();

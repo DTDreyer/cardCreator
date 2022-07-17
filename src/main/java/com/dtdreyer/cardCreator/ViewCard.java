@@ -1,4 +1,4 @@
-package com.dtdreyer.cardcreater;
+package com.dtdreyer.cardCreator;
 
 import org.json.JSONObject;
 
@@ -8,6 +8,8 @@ public class ViewCard {
      * This method prints the monster JSONObject to the console.
      * 
      * @param monsterCard the monster JSONObject to be printed.
+     * 
+     * @author dtdreyer
      */
     public static void viewMonsterCard(JSONObject monster) {
         System.out.println("----------------------------------------------------");
@@ -38,6 +40,8 @@ public class ViewCard {
      * This method prints the spell JSONObject to the console.
      * 
      * @param spellCard the spell JSONObject to be printed.
+     * 
+     * @author dtdreyer
      */
     public static void viewSpellAndCurseCard(JSONObject spell) {
         System.out.println("Spell Card:");

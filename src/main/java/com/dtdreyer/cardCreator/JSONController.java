@@ -1,4 +1,4 @@
-package com.dtdreyer.cardcreater;
+package com.dtdreyer.cardCreator;
 
 import java.io.*;
 import java.util.Scanner;
@@ -175,6 +175,11 @@ public class JSONController {
         }
     }
 
+    /**
+     * This method is used to get the last added card id.
+     * 
+     * @return int - the last added card id.
+     */
     public static int getLastAddedCardId() {
         JSONObject cardLib = getCardLib();
         JSONObject metaData = cardLib.getJSONObject("metaData");
@@ -182,6 +187,11 @@ public class JSONController {
         return lastAddedCardId;
     }
 
+    /**
+     * This method is used to set the last added card id.
+     * 
+     * @author dtdreyer
+     */
     public static void setLastAddedCardId() {
         JSONObject cardLib = getCardLib();
         JSONObject metaData = cardLib.getJSONObject("metaData");
@@ -198,6 +208,15 @@ public class JSONController {
         }
     }
 
+    /**
+     * This method is used to get the card with the given id.
+     * 
+     * @param id The id of the card to be retrieved.
+     * 
+     * @return JSONObject - the card with the given id.
+     * 
+     * @author dtdreyer
+     */
     public static JSONObject getCardById(String id) {
         // Searchs the card libary for the card with the given id.
         JSONObject cardLib = getCardLib();
@@ -220,6 +239,15 @@ public class JSONController {
         return null;
     }
 
+    /**
+     * This method is used to check if a monster card already exists.
+     * 
+     * @param newName The name of the monster card to be checked.
+     * 
+     * @return boolean - true if the monster card already exists, false if not.
+     * 
+     * @author dtdreyer
+     */
     public static boolean checkIfMonsterAlreadyExists(String newName) {
         JSONObject cardLib = getCardLib();
         JSONObject monsters = cardLib.getJSONObject("monsters");
@@ -234,6 +262,16 @@ public class JSONController {
         }
         return false;
     }
+
+    /**
+     * This method is used to check if a spell card already exists.
+     * 
+     * @param newName The name of the spell card to be checked.
+     * 
+     * @return boolean - true if the spell card already exists, false if not.
+     * 
+     * @author dtdreyer
+     */
     public static boolean checkIfSpellAlreadyExists(String newName) {
         JSONObject cardLib = getCardLib();
         JSONObject spells = cardLib.getJSONObject("spells");
@@ -249,6 +287,15 @@ public class JSONController {
         return false;
     }
 
+    /**
+     * This method is used to check if a curse card already exists.
+     * 
+     * @param newName The name of the curse card to be checked.
+     * 
+     * @return boolean - true if the curse card already exists, false if not.
+     * 
+     * @author dtdreyer
+     */
     public static boolean checkIfCurseAlreadyExists(String newName) {
         JSONObject cardLib = getCardLib();
         JSONObject curses = cardLib.getJSONObject("curses");
